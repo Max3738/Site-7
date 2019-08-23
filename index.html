@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="format-detection" content="telephone=no">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <title>Test page</title>
+      <link rel="stylesheet" href="css/styles.css">
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.js"
+         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+         crossorigin="anonymous"></script>
+      <script type="text/javascript">
+         $(document).ready(function()
+         {  
+          $('.toggler-slide-img').click(function () {
+           if($(".toggler").css("width") == "165px"){
+          // $('.d-none-el').hide(),500;
+          $('.d-none-el').animate({height: 'hide'},400); 
+          $('.toggler').animate({width :50},800);  
+          $('.toggler-slide-img').css('background-image', 'url("img/toggler-right.png")');
+         } 
+         else {
+         $('.d-none-el').animate({height: 'show'}, 400); 
+          $('.toggler').animate({width :165},800); 
+          $('.toggler-slide-img').css('background-image', 'url("img/toggler-left.png")');
+         
+         }
+         });
+         });
+      </script>
+   </head>
+   <body>
+      <header>
+         <section class=header>
+            <img class="logo" src="img/logo.png" alt=""/>
+            <div class="right-header">
+               <a href="#" class="feedback-block">
+               <img class="feedback-img" src="img/feedback.png" alt=""/>
+               <span class="feedback-desc">Feedback</span>
+               </a>
+               <a href="#" class="help-block">
+               <img class="help-img" src="img/help.png" alt=""/>
+               <span class="help-desc">Help</span>
+               </a>
+               <a href="#" class="name-block">
+               <span class="name-desc">John Johnson</span>
+               <img class="name-img" src="img/accepted.png" alt=""/>
+               </a>
+               <img class="right-logo-img" src="img/logo-right.png" alt=""/>
+            </div>
+         </section>
+      </header>
+      <main>
+         <div class="toggler" style="width: 50px">
+            <div class="toggler-top">
+               <p class="toggler-slide-img">   
+               </p>
+            </div>
+            <nav>
+               <ul>
+                  <li>
+                     <a class="toggle-link-1" href="">
+                        <p class="settings-img toggler-img">
+                        </p>
+                        <span class="d-none-el pointer-1">Pointer1</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="toggle-link-2" href="">
+                        <p class="map-pointer-img toggler-img">
+                        </p>
+                        <span class="d-none-el  pointer-2">Pointer2</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="toggle-link-3" href="">
+                        <p class="scale-img toggler-img">
+                        </p>
+                        <span class="d-none-el  pointer-3">Pointer3</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="toggle-link-4" href="">
+                        <p class="money-img toggler-img">
+                        </p>
+                        <span class="d-none-el  pointer-4">Pointer4</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="toggle-link-5" href="">
+                        <p class="journal-img toggler-img">
+                        </p>
+                        <span  class="d-none-el  pointer-5">Pointer5</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a class="toggle-link-6" href="">
+                        <p class="list-img toggler-img">
+                        </p>
+                        <span class="d-none-el pointer-6">Pointer6</span>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <section class="general-content">
+            <div class="progress-bar">
+               <div class="step-1">
+                  <p class="step-1-txt step">1. Step</p>
+                  <div class="step-img-bg-1">
+                     <img  class="step-img" src="img/step-1.png" alt=""/>
+                  </div>
+               </div>
+               <div class="step-2 ">
+                  <p class="step-2-txt step">2. Step</p>
+                  <div class="step-img-bg">
+                     <img  class="step-img" src="img/step-2.png" alt=""/>
+                  </div>
+               </div>
+               <div class="step-3">
+                  <p class="step-3-txt step">3. Step</p>
+                  <div class="step-img-bg-3">
+                     <img  class="step-img" src="img/step-3.png" alt=""/>
+                  </div>
+               </div>
+               <div class="step-4">
+                  <p class="step-4-txt step">4. Step</p>
+                  <div class="step-img-bg-4">
+                     <img  class="step-img" src="img/step-4.png" alt=""/>
+                  </div>
+               </div>
+            </div>
+            <form class="details-form">
+               <div class="details-left">
+                  <p class="shipper-details">Shipper Details</p>
+                  <input type="text" placeholder="Company Autocomplete" class="details-input input-searcher">
+               </div>
+               <div class="details-right">
+                  <p class="company-name">Company name</p>
+                  <input type="text" placeholder="Urban Space" class="details-input details-input-comp">
+               </div>
+            </form>
+            <p class="shipment-details">Shipment Details</p>
+            <table style="width: 100%">
+               <thead>
+                  <tr class="table-header">
+                     <th style="text-align: left;">Handling Unit Type(H/U)</th>
+                     <th style="display:flex;justify-content:left"># of H/U</th>
+                     <th>H/U Dimentions</th>
+                     <th>Stacable</th>
+                     <th style="text-align: left;">Commodity Description</th>
+                     <th>NMFC</th>
+                     <th>Class</th>
+                     <th># of Pieces</th>
+                     <th>Total Weight</th>
+                     <th>HazMat</th>
+                  </tr>
+               </thead>
+               <tr>
+                  <td rowspan="2" data-label="Handling Unit Type(H/U)">Pallets</td>
+                  <td rowspan="2" class="hu-number" data-label="# of H/U">3</td>
+                  <td data-label="H/U Dimentions">15 &#215; 24 &#215; 23 in</td>
+                  <td data-label="Stacable">Yes</td>
+                  <td data-label="Commodity Description">
+                     <input type="text" value="Multigrain Snacks.., 300" class="input-table">
+                  </td>
+                  <td data-label="NMFC">
+                     <input type="text" value="NMFC" class="input-nmfc">
+                  </td>
+                  <td data-label="Class">1</td>
+                  <td data-label="# of Pieces">1</td>
+                  <td data-label="Total Weight">400 lbs</td>
+                  <td data-label="HazMat">
+                     <input type="checkbox" id="check-1" name="check-1" />
+                     <label for="check-1" class="agree-txt"></label>
+                  </td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td data-label="Stacable">Yes</td>
+                  <td class="bg-line" data-label="Commodity Description">
+                     <input type="text" value="Multigrain Snacks.., 300" class="input-table">
+                  </td>
+                  <td class="bg-line" data-label="NMFC">
+                     <input type="text" value="NMFC" class="input-nmfc">
+                  </td>
+                  <td class="bg-line" data-label="Class">1</td>
+                  <td class="bg-line" data-label="# of Pieces">1</td>
+                  <td class="bg-line" data-label="Total Weight">400 lbs</td>
+                  <td class="bg-line" data-label="HazMat">
+                     <input type="checkbox" id="check-2" name="check-2" />
+                     <label for="check-2" class="agree-txt"></label>
+                  </td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td ></td>
+                  <td></td>
+                  <td></td>
+                  <td class="underline-block" colspan="6">
+                     <select class="input-block-txt">
+                        <option>UN</option>
+                        <option>UN2</option>
+                     </select>
+                     <input type="text" value="UN NUMBER" class="un-number input-block-txt">
+                     <input type="text" value="Proper Shipping Name" class=" propership input-block-txt ">
+                     <input type="text" value="Hazard Class" class="haz input-block-txt ">
+                     <span  title="some text gonna be here" class="about-hazard">?</span>
+                     <select class="packing input-block-txt">
+                        <option>Packing Group</option>
+                        <option>UN2</option>
+                     </select>
+                     <select class="packing input-block-txt">
+                        <option>Packing Type</option>
+                        <option>UN2</option>
+                     </select>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td class="bg-line"  data-label="Handling Unit Type(H/U)">Pallets</td>
+                  <td    class="hu-number bg-line"  data-label="# of H/U">3</td>
+                  <td class="bg-line" data-label="H/U Dimentions">15 &#215; 24 &#215; 23 in</td>
+                  <td class="bg-line" data-label="Stacable">Yes</td>
+                  <td class="bg-line" data-label="Commodity Description">
+                     <input type="text" value="Multigrain Snacks.., 300" class="input-table">
+                  </td>
+                  <td  class="bg-line" data-label="NMFC">
+                     <input type="text" value="NMFC" class="input-nmfc">
+                  </td>
+                  <td  class="bg-line" data-label="Class">1</td>
+                  <td class="bg-line"  data-label="# of Pieces">1</td>
+                  <td  class="bg-line" data-label="Total Weight">400 lbs</td>
+                  <td class="bg-line"  data-label="HazMat">
+                     <input type="checkbox" id="check-3" name="check-3" />
+                     <label for="check-3" class="agree-txt"></label>
+                  </td>
+               </tr>
+            </table>
+            <div class="agree">
+               <div class="agree-content">
+                  <input type="checkbox" id="check-4" name="check-4" />
+                  <label for="check-4" class="agree-txt">I Agree to the <a href="#" class="agree-link">Terms and Conditions</a></label>
+                  
+                  <a class="btn">DISPACTH</a>
+               </div>
+             
+            </div>
+         </section>
+      </main>
+      <script src="js/script.js"></script>
+   </body>
+</html>
